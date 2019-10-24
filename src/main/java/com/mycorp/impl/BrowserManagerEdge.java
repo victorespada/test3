@@ -1,10 +1,11 @@
 package com.mycorp.impl;
 
+import com.mycorp.BrowserDriverHelper;
+import com.mycorp.BrowserManagerEnum;
 import com.mycorp.IBrowserManager;
 import io.github.bonigarcia.wdm.BrowserManager;
 import io.github.bonigarcia.wdm.EdgeDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 
 public class BrowserManagerEdge implements IBrowserManager {
 
@@ -17,6 +18,7 @@ public class BrowserManagerEdge implements IBrowserManager {
     }
 
     public WebDriver getDriver() {
-        return new EdgeDriver();
+        return BrowserDriverHelper.selectDriver(BrowserManagerEnum.EDGE);
+
     }
 }

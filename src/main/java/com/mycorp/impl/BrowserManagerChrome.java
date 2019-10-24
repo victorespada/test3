@@ -1,10 +1,11 @@
 package com.mycorp.impl;
 
+import com.mycorp.BrowserDriverHelper;
+import com.mycorp.BrowserManagerEnum;
 import com.mycorp.IBrowserManager;
 import io.github.bonigarcia.wdm.BrowserManager;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BrowserManagerChrome implements IBrowserManager {
 
@@ -17,6 +18,6 @@ public class BrowserManagerChrome implements IBrowserManager {
     }
 
     public WebDriver getDriver() {
-        return new ChromeDriver();
+        return BrowserDriverHelper.selectDriver(BrowserManagerEnum.CHROME);
     }
 }
