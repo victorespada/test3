@@ -11,6 +11,12 @@ Prueba para ITERIAM / SANITAS
         - Voy a crear una factoria para los browser
         - Para arreglar los test vere como simularlo.
         
- 
+*2 Factoria*
+
+     Genero una factoria para el browsermanager y dejo el Enum solo para definir el nombre, quitandole toda la logica
+     Modifico el test para hacerlo compatible
+     Ha sido necesario subir a java8 (switch con cadenas, en el 7 no funcionaba) para la factoria, quería hacerla con el
+     enum, pero me gustaría seguir permitiendo el "test" y "perry" a la hora de llamar a la factoria...
+     Actualizado el pom para lombok
     
     

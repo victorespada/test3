@@ -67,44 +67,44 @@ public enum BrowserManagerEnum {
         }
     }
 
-    public BrowserManager getBrowserManager( final String version ) {
-        return getBrowserManager().version( version );
-    }
-
-    public WebDriver getDriver() {
-        switch( this ) {
-        case CHROME:     return new ChromeDriver();
-        case FIREFOX:    return new FirefoxDriver();
-        case EDGE:       return new EdgeDriver();
-        case IE:         return new InternetExplorerDriver();
-        case MARIONETTE: return new FirefoxDriver();
-        case OPERA:      return new OperaDriver();
-        case PHANTOMJS:  return new PhantomJSDriver();
-        case NONE: default:
-            final DesiredCapabilities dc = new DesiredCapabilities( BrowserType.MOCK, "mock-version", Platform.ANY );
-            final RemoteWebDriver mock = new RemoteWebDriver( dc ) {
-                /**
-                 * {@inheritDoc}
-                 *
-                 * @see RemoteWebDriver#execute(String, Map)
-                 */
-                @Override
-                protected Response execute( final String driverCommand, final Map< String, ? > parameters ) {
-                    return new Response();
-                }
-
-                /**
-                 * {@inheritDoc}
-                 *
-                 * @see RemoteWebDriver#startSession(Capabilities, Capabilities)
-                 */
-                @Override
-                protected void startSession( final Capabilities desiredCapabilities, final Capabilities requiredCapabilities ) {
-                    setSessionId( "mock" );
-                }
-            };
-            return mock;
-        }
-    }
+//    public BrowserManager getBrowserManager( final String version ) {
+//        return getBrowserManager().version( version );
+//    }
+//
+//    public WebDriver getDriver() {
+//        switch( this ) {
+//        case CHROME:     return new ChromeDriver();
+//        case FIREFOX:    return new FirefoxDriver();
+//        case EDGE:       return new EdgeDriver();
+//        case IE:         return new InternetExplorerDriver();
+//        case MARIONETTE: return new FirefoxDriver();
+//        case OPERA:      return new OperaDriver();
+//        case PHANTOMJS:  return new PhantomJSDriver();
+//        case NONE: default:
+//            final DesiredCapabilities dc = new DesiredCapabilities( BrowserType.MOCK, "mock-version", Platform.ANY );
+//            final RemoteWebDriver mock = new RemoteWebDriver( dc ) {
+//                *//**
+//                 * {@inheritDoc}
+//                 *
+//                 * @see RemoteWebDriver#execute(String, Map)
+//                 *//*
+//                @Override
+//                protected Response execute( final String driverCommand, final Map< String, ? > parameters ) {
+//                    return new Response();
+//                }
+//
+//                *//**
+//                 * {@inheritDoc}
+//                 *
+//                 * @see RemoteWebDriver#startSession(Capabilities, Capabilities)
+//                 *//*
+//                @Override
+//                protected void startSession( final Capabilities desiredCapabilities, final Capabilities requiredCapabilities ) {
+//                    setSessionId( "mock" );
+//                }
+//            };
+//            return mock;
+//        }
+//    }
 
 }
