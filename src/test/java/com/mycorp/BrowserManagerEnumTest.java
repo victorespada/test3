@@ -1,5 +1,6 @@
 package com.mycorp;
 
+import com.mycorp.impl.BrowserManagerChrome;
 import com.mycorp.impl.BrowserManagerNone;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import io.github.bonigarcia.wdm.VoidDriverManager;
@@ -8,6 +9,8 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.remote.RemoteWebDriver;
+
+import static com.mycorp.BrowserManagerEnum.CHROME;
 
 
 /**
@@ -31,18 +34,14 @@ public class BrowserManagerEnumTest {
 
 
 
-//    @Test
-//    @Ignore
-//    public void shouldCheckOfChrome() throws Exception {
-//        BrowserManagerEnum of = BrowserManagerEnum.of("test");
-//        Assert.assertEquals(BrowserManagerEnum.NONE, of);
-//        of = BrowserManagerEnum.of("perry");
-//        Assert.assertEquals(BrowserManagerEnum.NONE, of);
-//        of = BrowserManagerEnum.of("chrome");
-//        Assert.assertEquals(BrowserManagerEnum.CHROME, of);
-//        Assert.assertTrue(of.getBrowserManager() instanceof ChromeDriverManager);
-//        Assert.assertTrue(of.getBrowserManager("1") instanceof ChromeDriverManager);
-//        Assert.assertTrue(of.getDriver() instanceof RemoteWebDriver);
-//    }
+    @Test
+    public void shouldCheckOfChrome() throws Exception {
+        IBrowserManager of = BrowserManagerFactory.manager(CHROME.name());
+
+        Assert.assertEquals(BrowserManagerChrome.class.isInstance(of), Boolean.TRUE);
+        Assert.assertTrue(of.getBrowserManager() instanceof ChromeDriverManager);
+        Assert.assertTrue(of.getBrowserManager("1") instanceof ChromeDriverManager);
+        Assert.assertTrue(of.getDriver() instanceof RemoteWebDriver);
+    }
 
 }

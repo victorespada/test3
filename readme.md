@@ -19,4 +19,7 @@ Prueba para ITERIAM / SANITAS
      enum, pero me gustaría seguir permitiendo el "test" y "perry" a la hora de llamar a la factoria...
      Actualizado el pom para lombok
     
+*3 Tests*
+    
+    Tras adaptarlo y quitar lo que sobraba veo que falla, hay que simular de alguna manera la llamada a getdriver, que es la que provoca los problemas.    
     
