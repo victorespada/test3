@@ -54,18 +54,18 @@ public enum BrowserManagerEnum {
         return NONE;
     }
 
-    public BrowserManager getBrowserManager() {
-        switch( this ) {
-        case CHROME:        return ChromeDriverManager.getInstance().version( "2.24" );
-        case FIREFOX:       return FirefoxDriverManager.getInstance();
-        case EDGE:          return EdgeDriverManager.getInstance();
-        case IE:            return InternetExplorerDriverManager.getInstance();
-        case MARIONETTE:    return FirefoxDriverManager.getInstance();
-        case OPERA:         return OperaDriverManager.getInstance();
-        case PHANTOMJS:     return PhantomJsDriverManager.getInstance();
-        case NONE: default: return VoidDriverManager.getInstance().version( "1" );
-        }
-    }
+//    public BrowserManager getBrowserManager() {
+//        switch( this ) {
+//        case CHROME:        return ChromeDriverManager.getInstance().version( "2.24" );
+//        case FIREFOX:       return FirefoxDriverManager.getInstance();
+//        case EDGE:          return EdgeDriverManager.getInstance();
+//        case IE:            return InternetExplorerDriverManager.getInstance();
+//        case MARIONETTE:    return FirefoxDriverManager.getInstance();
+//        case OPERA:         return OperaDriverManager.getInstance();
+//        case PHANTOMJS:     return PhantomJsDriverManager.getInstance();
+//        case NONE: default: return VoidDriverManager.getInstance().version( "1" );
+//        }
+//    }
 
 //    public BrowserManager getBrowserManager( final String version ) {
 //        return getBrowserManager().version( version );

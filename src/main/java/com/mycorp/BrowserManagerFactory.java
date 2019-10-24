@@ -11,9 +11,11 @@ public class BrowserManagerFactory {
 		switch(browserType.toUpperCase()) {
 			case "CHROME": return new BrowserManagerChrome();
 			case "EDGE": return new BrowserManagerEdge();
-			case "FIREFOX" : return new BrowserManagerFirefox();
+			case "FIREFOX" :
+			case "MARIONETTE":
+				return new BrowserManagerFirefox();
 			case "IE": return new BrowserManagerIE();
-			case "MARIONETTE": return new BrowserManagerMarionette();
+
 			case "OPERA": return new BrowserManagerOpera();
 			case "PHANTOMJS": return new BrowserManagerPhantomJS();
 			case "NONE": default: return new BrowserManagerNone();

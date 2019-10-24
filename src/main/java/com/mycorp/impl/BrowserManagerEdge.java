@@ -18,7 +18,7 @@ public class BrowserManagerEdge implements IBrowserManager {
     }
 
     public WebDriver getDriver() {
-        return BrowserDriverHelper.selectDriver(BrowserManagerEnum.EDGE);
+        return BrowserDriverHelper.getDriver(BrowserManagerEnum.EDGE);
 
     }
 }

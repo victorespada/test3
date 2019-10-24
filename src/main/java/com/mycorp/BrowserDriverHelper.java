@@ -18,18 +18,16 @@ import java.util.Map;
 
 public class BrowserDriverHelper {
 
-    public static WebDriver selectDriver(BrowserManagerEnum browser) {
+    public static WebDriver getDriver(BrowserManagerEnum browser) {
         switch (browser) {
             case CHROME:
                 return getChromeDriver();
-            case FIREFOX:
+            case FIREFOX: case MARIONETTE:
                 return getFirefoxDriver();
             case EDGE:
                 return getEdgeDriver();
             case IE:
                 return getIEDriver();
-            case MARIONETTE:
-                return getFirefoxDriver();
             case OPERA:
                 return getOperaDriver();
             case PHANTOMJS:

@@ -28,5 +28,7 @@
 + Añado powermockito
 + La clase getdriver da problemas y hay que mockearla, la meto en una clase estatica, un helper
 
+### 5 Tests
++ Pasados, con la peculiaridad de Marionette, que al ser el código igual que firefox el mock al driver se hace con la llamada a firefox.
     
     

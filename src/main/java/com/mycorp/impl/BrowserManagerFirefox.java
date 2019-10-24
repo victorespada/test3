@@ -4,13 +4,13 @@ import com.mycorp.BrowserDriverHelper;
 import com.mycorp.BrowserManagerEnum;
 import com.mycorp.IBrowserManager;
 import io.github.bonigarcia.wdm.BrowserManager;
-import io.github.bonigarcia.wdm.ChromeDriverManager;
+import io.github.bonigarcia.wdm.FirefoxDriverManager;
 import org.openqa.selenium.WebDriver;
 
 public class BrowserManagerFirefox implements IBrowserManager {
 
     public BrowserManager getBrowserManager() {
-        return ChromeDriverManager.getInstance();
+        return FirefoxDriverManager.getInstance();
     }
 
     public BrowserManager getBrowserManager(final String version) {
@@ -18,7 +18,7 @@ public class BrowserManagerFirefox implements IBrowserManager {
     }
 
     public WebDriver getDriver() {
-        return BrowserDriverHelper.selectDriver(BrowserManagerEnum.FIREFOX);
+        return BrowserDriverHelper.getDriver(BrowserManagerEnum.FIREFOX);
 
     }
 }

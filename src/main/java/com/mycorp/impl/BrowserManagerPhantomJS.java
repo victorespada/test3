@@ -18,6 +18,6 @@ public class BrowserManagerPhantomJS implements IBrowserManager {
     }
 
     public WebDriver getDriver() {
-        return BrowserDriverHelper.selectDriver(BrowserManagerEnum.PHANTOMJS);
+        return BrowserDriverHelper.getDriver(BrowserManagerEnum.PHANTOMJS);
     }
 }

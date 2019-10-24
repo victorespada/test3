@@ -18,7 +18,7 @@ public class BrowserManagerIE implements IBrowserManager {
     }
 
     public WebDriver getDriver() {
-        return BrowserDriverHelper.selectDriver(BrowserManagerEnum.IE);
+        return BrowserDriverHelper.getDriver(BrowserManagerEnum.IE);
 
     }
 }

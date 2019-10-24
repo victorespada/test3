@@ -18,6 +18,6 @@ public class BrowserManagerChrome implements IBrowserManager {
     }
 
     public WebDriver getDriver() {
-        return BrowserDriverHelper.selectDriver(BrowserManagerEnum.CHROME);
+        return BrowserDriverHelper.getDriver(BrowserManagerEnum.CHROME);
     }
 }

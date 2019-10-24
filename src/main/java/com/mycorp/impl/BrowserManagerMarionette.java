@@ -18,6 +18,6 @@ public class BrowserManagerMarionette implements IBrowserManager {
     }
 
     public WebDriver getDriver() {
-        return BrowserDriverHelper.selectDriver(BrowserManagerEnum.FIREFOX);
+        return BrowserDriverHelper.getDriver(BrowserManagerEnum.FIREFOX);
     }
 }

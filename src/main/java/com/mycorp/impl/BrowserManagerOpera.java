@@ -18,6 +18,6 @@ public class BrowserManagerOpera implements IBrowserManager {
     }
 
     public WebDriver getDriver() {
-        return BrowserDriverHelper.selectDriver(BrowserManagerEnum.OPERA);
+        return BrowserDriverHelper.getDriver(BrowserManagerEnum.OPERA);
     }
 }
