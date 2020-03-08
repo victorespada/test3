@@ -36,7 +36,8 @@ public enum BrowserManagerEnum {
     MARIONETTE( "marionette" ),
     OPERA( "opera" ),
     PHANTOMJS( "phantomjs" ),
-    NONE( "test" );
+    NONE( "test" ),
+	EXPLORER("explorer");
 
     private final String browserName;
 
