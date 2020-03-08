@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 public class BrowserManagerMarionette implements IBrowserManager {
 
     
-    //esto ya funciona
+//pruebas
     public BrowserManager getBrowserManager() {
         return FirefoxDriverManager.getInstance();
     }
