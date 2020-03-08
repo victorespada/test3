@@ -53,4 +53,7 @@ public class BrowserManagerNone implements IBrowserManager {
     public WebDriver getMockedDriver() {
         return getDriver();
     }
+ public WebDriver getMockedDriver22() {
+        return getDriver();
+    }
 }
