@@ -7,6 +7,7 @@ import io.github.bonigarcia.wdm.BrowserManager;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import org.openqa.selenium.WebDriver;
 
+//chrome fail
 public class BrowserManagerChrome implements IBrowserManager {
 
     public BrowserManager getBrowserManager() {
