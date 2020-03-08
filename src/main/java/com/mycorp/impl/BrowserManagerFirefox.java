@@ -17,6 +17,9 @@ public class BrowserManagerFirefox implements IBrowserManager {
         return getBrowserManager().version(version);
     }
 
+	public void getData(){
+	}
+	
     public WebDriver getDriver() {
         return BrowserDriverHelper.getDriver(BrowserManagerEnum.FIREFOX);
 
